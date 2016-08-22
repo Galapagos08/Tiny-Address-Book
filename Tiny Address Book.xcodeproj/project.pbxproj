@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F7F59EE91D6B7F2200411896 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F59EE81D6B7F2200411896 /* main.m */; };
+		F7F59EF91D6BB6EC00411896 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F59EF61D6BB6EC00411896 /* Person.m */; };
+		F7F59EFA1D6BB6EC00411896 /* Userinput.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F59EF81D6BB6EC00411896 /* Userinput.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		F7F59EE51D6B7F2200411896 /* Tiny Address Book */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Tiny Address Book"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F59EE81D6B7F2200411896 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7F59EF51D6BB6EC00411896 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F7F59EF61D6BB6EC00411896 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F7F59EF71D6BB6EC00411896 /* Userinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Userinput.h; sourceTree = "<group>"; };
+		F7F59EF81D6BB6EC00411896 /* Userinput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Userinput.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				F7F59EE81D6B7F2200411896 /* main.m */,
+				F7F59EF51D6BB6EC00411896 /* Person.h */,
+				F7F59EF61D6BB6EC00411896 /* Person.m */,
+				F7F59EF71D6BB6EC00411896 /* Userinput.h */,
+				F7F59EF81D6BB6EC00411896 /* Userinput.m */,
 			);
 			path = "Tiny Address Book";
 			sourceTree = "<group>";
@@ -120,6 +130,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F59EF91D6BB6EC00411896 /* Person.m in Sources */,
+				F7F59EFA1D6BB6EC00411896 /* Userinput.m in Sources */,
 				F7F59EE91D6B7F2200411896 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +261,7 @@
 				F7F59EEE1D6B7F2200411896 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
