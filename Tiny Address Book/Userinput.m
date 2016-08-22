@@ -7,6 +7,7 @@
 //
 
 #import "Userinput.h"
+#import "Person.h"
 
 NSString *getStringFromUser(int stringLength, NSString *prompt) {
     
@@ -22,6 +23,15 @@ NSString *getStringFromUser(int stringLength, NSString *prompt) {
     
     free(buffer);
     return returnValue;
+}
+void userEntry() {
+    NSString *name = getStringFromUser(50, @"\n\nPlease enter the name of your entry, in the form of LastnameFirstname:\n\n");
+    NSString *email = getStringFromUser(100, @"\n\nNow please enter the person's email address\n\n");
+    
+    Person *identity = [[Person alloc] initWithName:name
+                                              email:email];
+    
+    NSLog(@"\n\nName: %@Email: %@\n\n", [identity name], [identity email]);
 }
 
 

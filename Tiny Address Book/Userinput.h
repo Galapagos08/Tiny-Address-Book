@@ -10,5 +10,5 @@
 
 NSString *getStringFromUser(int stringLength, NSString *prompt);
 
-
+void userEntry();
 
