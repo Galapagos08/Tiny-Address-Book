@@ -11,8 +11,8 @@
 @interface Person : NSObject {
 }
 
-@property (nonatomic) NSString *name;
-@property (nonatomic) NSString *email;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *email;
     
     
 - (instancetype)initWithName:(NSString *)name
