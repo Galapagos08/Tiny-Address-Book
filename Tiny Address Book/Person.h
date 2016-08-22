@@ -13,10 +13,12 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *friend;
     
     
 - (instancetype)initWithName:(NSString *)name
-                       email:(NSString *)email NS_DESIGNATED_INITIALIZER;
+                       email:(NSString *)email
+                      friend:(NSString *)friend NS_DESIGNATED_INITIALIZER;
 
 
 @end
