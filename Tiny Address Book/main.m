@@ -10,10 +10,16 @@
 #import "Person.h"
 #import "Userinput.h"
 
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-    
-        userEntry();
+        
+        BOOL anotherEntry = YES;
+        
+        while (anotherEntry) {
+            anotherEntry = getEntry();
+        }
         
     }
     return 0;

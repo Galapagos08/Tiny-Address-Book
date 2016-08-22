@@ -10,5 +10,8 @@
 
 NSString *getStringFromUser(int stringLength, NSString *prompt);
 
+NSNumber *getNumberFromUser(int maxValidChoice);
+
 void userEntry();
 
+BOOL getEntry(void);
