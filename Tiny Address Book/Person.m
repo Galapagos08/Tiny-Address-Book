@@ -13,17 +13,17 @@
 - (instancetype)init {
     return [self initWithName:@"Unnamed"
                         email:@"Not set"
-                       friend:@"tbd"];
+                        buddy:@"tbd"];
 }
 
 - (instancetype)initWithName:(NSString *)name
                        email:(NSString *)email
-                      friend:(NSString *)friend {
+                       buddy:(NSString *)buddy {
     self = [super init];
     if (self) {
         _name = name;
         _email = email;
-        _friend = friend;
+        _buddy = buddy;
     }
     return self;
 }
@@ -40,8 +40,8 @@
     return _email;
 }
 
-- (NSString *)friend {
-    return _friend;
+- (NSString *)buddy {
+    return _buddy;
 }
     
 @end

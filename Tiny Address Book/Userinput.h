@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
 NSString *getStringFromUser(int stringLength, NSString *prompt);
 
 NSNumber *getNumberFromUser(int maxValidChoice);
 
-void userEntry();
+Person* userEntry();
 
-BOOL getEntry(void);
+int addresses();
+

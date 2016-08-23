@@ -38,23 +38,33 @@ NSNumber *getNumberFromUser(int maxValidChoice) {
     }
     return @(choice);
 }
-void userEntry() {
-    NSString *name = getStringFromUser(50, @"\n\nPlease enter the name of your entry, in the form of LastnameFirstname (without spaces):\n\n");
+Person* userEntry() {
+    NSString *name = getStringFromUser(50, @"\n\nPlease enter the name of the person you wish to add to the address book:\n\n");
     NSString *email = getStringFromUser(100, @"\n\nNow please enter the person's email address\n\n");
-    NSString *friend = getStringFromUser(50, @"\n\nNow please enter the person's friend, in the form of LastnameFirstname (without spaces):\n\n");
+    NSString *buddy = getStringFromUser(50, @"\n\nNow please enter the name of the person's friend:\n\n");
     Person *identity = [[Person alloc] initWithName:name
                                               email:email
-                                             friend:friend];
-    
-    NSLog(@"\n\nName: %@Email: %@Friend: %@\n\n", [identity name], [identity email], [identity friend]);
+                                              buddy:buddy];
+    return identity;
 }
-BOOL getEntry(void) {
-    
-        userEntry();
-    
+int addresses() {
+    Person *Person = userEntry();
+    NSMutableArray *entries = [NSMutableArray array];
+    [entries addObject: Person];
+    NSLog(@"\n\n|Name:    %@|Email:   %@|Buddy:   %@\n", Person, [Person email], [Person buddy]);
     NSLog(@"\nWould you like to make another entry?\n(0 = NO; 1 = YES)\n");
-
-    NSNumber *userWouldLikeAnotherEntry = getNumberFromUser(1);
-    
-    return [@1 isEqual: userWouldLikeAnotherEntry];
+    NSNumber *anotherEntry = getNumberFromUser(1);
+    return [anotherEntry intValue];
 }
+
+
+
+
+
+
+
+
+
+
+
+
