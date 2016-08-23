@@ -15,24 +15,27 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        BOOL shouldContinue = YES;
         
-        Person *identity = userEntry();
-        
-        
-        NSMutableArray *bookEntry = [NSMutableArray array];
-        [bookEntry addObject:identity];
-        NSMutableString *string = [NSMutableString string];
-        NSInteger lastIndex = bookEntry.count - 1;
-        NSInteger index = 0;
-        for (Person *identity in bookEntry) {
-            [string appendFormat:@"Name:  %@Email:  %@Buddy:  %@", identity.name, identity.email, identity.buddy];
-            
-            if (index++ < lastIndex) {
-                [string appendString:@"\n"];
+        while (shouldContinue) {
+            Person *identity = userEntry();
+            NSMutableArray *bookEntry = [NSMutableArray array];
+            [bookEntry addObject:identity];
+            NSMutableString *string = [NSMutableString string];
+            NSInteger lastIndex = bookEntry.count - 1;
+            NSInteger index = 0;
+            for (Person *identity in bookEntry) {
+                [string appendFormat:@"Name:  %@Email:  %@Buddy:  %@", identity.name, identity.email, identity.buddy];
+                
+                if (index++ < lastIndex) {
+                    [string appendString:@"\n"];
+                }
+                NSLog(@"\n%@", string);
             }
+            NSLog(@"\nWould you like to make another entry?\n(0 = NO; 1 = YES)\n");
+            NSNumber *anotherEntry = getNumberFromUser(1);
+            shouldContinue = [anotherEntry intValue];
         }
-        
-        NSLog(@"\n%@", string);
     }
     return 0;
 }
@@ -41,11 +44,6 @@ int main(int argc, const char * argv[]) {
 
 
 
-
-/*
-    NSLog(@"\nWould you like to make another entry?\n(0 = NO; 1 = YES)\n"); */
-
-    
     
 
 
